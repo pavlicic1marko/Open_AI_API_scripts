@@ -6,9 +6,13 @@ with open('config.json') as config_file:
 
 openai.api_key = api_key
 
-model_id = "gpt-3.5-turbo"
+# model options
+gpt_4 = "gpt-4"
+gpt_3x5_turbo = "gpt-3.5-turbo"
+
+model_id = gpt_4
 # Initial message to ask the first question
-messages = [ {"role": "user", "content": "Where was the last olympics held? Just tell me the year & country?"} ]
+messages = [ {"role": "user", "content": "what is the average iq"} ]
 
 # Call the API
 completion = openai.chat.completions.create(model=model_id,
